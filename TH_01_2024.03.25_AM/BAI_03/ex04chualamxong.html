@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    table,td,th  {
+    border:1px solid rgb(31, 27, 27);
+    border-collapse: collapse;
+    margin: 10px;
+    padding:0;
+    }
+    .c:hover{color:aquamarine}
+    .d{ display: flex;
+        background-color: grey;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    }
+</style>
+<body>
+    <table>
+        <tr>
+            <td><div style="display: flex;">
+                <div><i class="fa fa-check" aria-hidden="true" style="padding-top: 30px;"></i></div>
+                <div>Quy định sử dụng</div>
+            <div><img src="data:image/jpeg;base64,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" width="40px">
+                <b> Liên hệ kinh doanh</b></div>                      
+            </td>
+            <td>
+                <i class="fa fa-check" aria-hidden="true" >Hướng dẫn thanh toán</i>
+            </td>
+            <td>
+                <i class="fa fa-check" aria-hidden="true" >Download bảng giá</i>
+            </td>
+            </div>
+            <td >
+                Sale 1:<br>
+                <div>
+                <table  width="150px" >
+                <td class="d" >  
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAnACsDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQYAAwcE/8QANBAAAAUDAgMFBAsAAAAAAAAAAQIDBAUABhESMQcTISJBUWGBFEKRwRUjJCUzNENicXKC/8QAGQEAAwADAAAAAAAAAAAAAAAAAgMFAQQG/8QAIBEAAQMEAwEBAAAAAAAAAAAAAQACAwQREjEFEyEykf/aAAwDAQACEQMRAD8A0y5ryhLc1tUUTLuyAGG7ZHPxxtQjHEOfPzWCxYkg9SJAQFOnrQbh2tBsY5ecfvkQfKJgss5dD4jt6Vp1oXtBvQWbNJyMUdq/ljkEegVPmqMAlNyeUNhLM4gLN9bq6CgPiLYgVe7ib6gRIkRFKcBUNfMOcE+X5YCnUkjIEbot1pCKO6VMIE6DgcVWhcC3s/10xGc46waDlzoAO8P5oaSoJ+tpmHiUIa4G712diuis1epBhRNVMSEEfAgjv6UZrouFtFT8Q6E7lqo/ZnFQirPdDz6/ClS2pZ7IQjZ2oUms4CA+hhD5Vvh5WA5KfCe0IKKsVC9L3IqflHwmCQicop9AJ2A33rQbka2XITbW2is+S7VQF2gogTQXQTxOHf12pTtyYXV4ftEWsaWSQjVzt3rbGVD6MBlP18aJxU0tLyqAMrVWYnS/EdPU8EIn3h0764Cfkm9Dg4HO/wCK1DQuI7B8rvsOeJBSi1vypDDylBOicSax0DtTaZRORdonYOitUMaxTUZAG3mNYFe90yZ71XmIYpTkQEG4k97sDuFOl33HNXPaQK23JiAMhIMgRsP2lMd8j3YxvV/i4pJKZr5dqTNZkhDdJxve9IaHiFmbEEXr5zlEASx1P35xtQG2IlyygmzdQ3bKAmH/AEYR+dLHDm1WKn3yqYqx1D6xOH6g+I1o2MdNNX2NsPUsBJDePiLkOeftl6uxkFEgEiukQTL+4yewjVr627qmUfZ5i6SLJk91u1BA3xLUqUqSgp3S3LUyOd4Frqhvw+ImJUzv9Zc5xo7Q+tVSPDGOfLCoo8dI5DCgIrCnq/tjepUp+AAS3elMFk243tlh9Hs1zqN9YnKU5hMYBHzGj+BqVKKPSJf/2Q=="
+                width="40px" height="40px" >
+                <div class="c">
+                <font size="3" style="vertical-align: top;">I am Online</font><br>
+                <font size="1" style="border-radius:20px;vertical-align: bottom;">Send me a message</font>
+                </div>    
+                </td>
+                </table>
+                
+            </td>
+        </tr>   
+    </table>   
+</body>
+</html>
