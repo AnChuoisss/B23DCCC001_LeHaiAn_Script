@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// Hàm tạo mảng ngẫu nhiên
+function mangngaunhien(length, min, max) {
+    let array = [];
+    for (let i = 0; i < length; i++) {
+        let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        array.push(randomNumber);
+    }
+    return array;
+}
+// Hàm tìm số lớn nhất trong mảng
+function solonnhat(array) {
+    let max = array[0];
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i];
+        }
+    }
+    return max;
+}
+// Hàm kiểm tra xem một số có phải là số chính phương hay không
+function lasochinhphuong(number) {
+    return Math.sqrt(number) % 1 === 0;
+}
+// Hàm tính trung bình cộng của mảng
+function tbc(array) {
+    let sum = 0;
+    for (const a of array) {
+        sum += a;
+    }
+    return sum / array.length;
+} 
+// Hàm tính trung bình cộng của các số không âm trong mảng
+function tbckoam(randomArray) {
+    let sum = 0;
+    let count = 0;
+    for (const number of randomArray) {
+        if (number >= 0) { // Kiểm tra số không âm
+            sum += number;
+            count++;
+        }
+    }
+    if (count === 0) {
+        return "Không có số không âm trong mảng!";
+    }
+    return sum / count;
+}
+
+// Tạo mảng ngẫu nhiên
+let randomArray = mangngaunhien(10, -1, 100);
+document.write("Mảng ngẫu nhiên:", randomArray);
+
+// Tìm và in ra số lớn nhất trong mảng
+let maxNumber = solonnhat(randomArray);
+document.write("<br>Số lớn nhất trong mảng:", maxNumber);
+
+// Tìm và in ra các số chính phương trong mảng
+let perfectSquares = randomArray.filter(lasochinhphuong);
+document.write("<br>Các số chính phương trong mảng:", perfectSquares);
+
+// Tính trung bình cộng của các số trong mảng
+let average = tbc(randomArray);
+document.write("<br>Trung bình cộng của các số trong mảng:", average.toFixed(2)); //toFixed(2) để làm tròn đến 2 chữ số thập phân
+
+// Tính trung bình cộng của các số không âm trong mảng
+let averageNonNegative = tbckoam(randomArray);
+document.write("<br>Trung bình cộng của các số không âm trong mảng:", averageNonNegative.toFixed(2)); //toFixed(2) để làm tròn đến 2 chữ số thập phân
+
+// Lọc ra các số lớn hơn số trung bình cộng của mảng và in ra
+let greaterThanAverage = randomArray.filter(number => number > average);
+document.write("<br>Các số lớn hơn số trung bình của mảng:", greaterThanAverage);
+</script>
+<h1>Bài 2</h1>
+</body>
+</html>

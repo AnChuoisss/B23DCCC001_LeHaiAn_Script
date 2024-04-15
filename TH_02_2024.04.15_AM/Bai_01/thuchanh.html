@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let userArray = createArrayFromInput();
+let sortedArray = userArray.slice().sort((a, b) => a - b);
+let arrayDisplay = document.getElementById('arrayDisplay');
+function createArrayFromInput() {
+    let input = prompt("Nhập các phần tử của mảng, phân tách bằng dấu cách:");
+    let array = input.split(",").map(Number);
+    return array;
+}
+function sortAndDisplayArray() {
+    arrayDisplay.innerText = "Mảng đã sắp xếp: " + sortedArray.join(", ");
+}
+function unique_arr(arr) {
+  return Array.from(new Set(arr)) //
+}
+document.write("Mảng ban đầu là:", userArray);
+document.write("<br>Mảng sau khi sắp xếp là:",unique_arr(sortedArray));
+</script>
+</body>
+</html>
