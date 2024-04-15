@@ -7,22 +7,19 @@
 </head>
 <body>
 <script>
-let userArray = createArrayFromInput();
-let sortedArray = userArray.slice().sort((a, b) => a - b);
-let arrayDisplay = document.getElementById('arrayDisplay');
-function createArrayFromInput() {
+let nhapmang = taomang();
+let sapxep = nhapmang.slice().sort((a, b) => a - b);
+let mang1 = document.getElementById('mang1');
+function taomang() {
     let input = prompt("Nhập các phần tử của mảng, phân tách bằng dấu cách:");
     let array = input.split(",").map(Number);
     return array;
 }
-function sortAndDisplayArray() {
-    arrayDisplay.innerText = "Mảng đã sắp xếp: " + sortedArray.join(", ");
-}
-function unique_arr(arr) {
+function boptugiongnhau(arr) {
   return Array.from(new Set(arr)) //
 }
-document.write("Mảng ban đầu là:", userArray);
-document.write("<br>Mảng sau khi sắp xếp là:",unique_arr(sortedArray));
+document.write("Mảng ban đầu là:", nhapmang);
+document.write("<br>Mảng sau khi sắp xếp là:",boptugiongnhau(sapxep));
 </script>
 </body>
 </html>
