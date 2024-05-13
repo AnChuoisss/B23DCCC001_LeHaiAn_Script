@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Item</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body> 
+    <h1>Items Lists</h1>
+    <br><ul id="itemList"></ul>
+    <input type="text" id="moi" placeholder="nhap du lieu">
+    <br><button id="add">Add</button>
+    </ul>
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function(){
+                var newItem = $("#moi").val().trim(); 
+                if (newItem !== "") { 
+                    $("#itemList").append("<li>" + newItem + "</li>"); 
+                    $("#moi").val(""); 
+                }
+            });
+        });
+    </script>
+</body>
+</html>
