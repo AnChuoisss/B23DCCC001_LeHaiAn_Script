@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 50 auto;/*khoảng cách bên trong viền */
+    padding: 0;/*khảng cách bên ngoài viền*/
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image: url("A.jpg");
+    background-size: cover;/* tự chia tỉ lệ lớn nhất và hợp lí với phần nội dung*/
+    background-repeat: no-repeat;/*lặp lại duy nhất 1 lần*/
+    background-attachment: fixed;/*cố định ảnh đi cùng với nền*/
+    overflow: scroll;/* thanh cuộn*/
+}
+.wrapper{
+    display: flex;/*xếp theo hàng*/
+    justify-content: center;/*căn chỉnh trái giữa phải*/ 
+    align-items: center;/*căn chỉnh chữ trên giữa dưỡi*/
+    min-height: 110vh;
+    background: rgba(39, 39, 39, 0.4);
+}
+
+.nav-logo p{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
