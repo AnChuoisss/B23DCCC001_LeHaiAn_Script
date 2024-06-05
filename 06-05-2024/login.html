@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        // Hàm kiểm tra trạng thái đăng nhập và chuyển hướng nếu đã đăng nhập
+        function checkLogin() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (isLoggedIn === 'true') {
+                window.location.href = 'admin.html';
+            }
+        }
+
+        // Hàm xử lý đăng nhập
+        function login(event) {
+            event.preventDefault();
+            const user = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Kiểm tra thông tin đăng nhập (ở đây giả sử thông tin đúng là admin/admin)
+            if (user === 'admin' && password === 'admin') {
+                localStorage.setItem('isLoggedIn', 'true');
+                window.location.href = 'admin.html';
+            } else {
+                alert('Thông tin đăng nhập không đúng, vui lòng thử lại.');
+            }
+        }
+
+        // Gọi hàm checkLogin khi trang được tải
+        window.onload = checkLogin;
+    </script>
+</head>
+<body>
+    <h2>Login</h2>
+    <form onsubmit="login(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">Login</button>
+    </form>
+
+</script>
+</body>
+</html>

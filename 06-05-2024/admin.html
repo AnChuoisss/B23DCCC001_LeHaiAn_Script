@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <script>
+        // Hàm kiểm tra trạng thái đăng nhập và chuyển hướng nếu chưa đăng nhập
+        function checkLogin() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (isLoggedIn !== 'true') {
+                window.location.href = 'login.html';
+            }
+        }
+
+        // Hàm xử lý đăng xuất
+        function logout() {
+            localStorage.setItem('isLoggedIn', 'false');
+            window.location.href = 'login.html';
+        }
+
+        // Gọi hàm checkLogin khi trang được tải
+        window.onload = checkLogin;
+    </script>
+</head>
+<body>
+    <h2>Admin Page</h2>
+    <button onclick="logout()">Logout</button>
+
+</script>
+</body>
+</html>
